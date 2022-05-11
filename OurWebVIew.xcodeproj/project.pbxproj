@@ -11,6 +11,7 @@
 		934D0A14281FE75300D8059B /* OurWebVIew.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 934D0A09281FE75200D8059B /* OurWebVIew.framework */; };
 		934D0A19281FE75300D8059B /* OurWebVIewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934D0A18281FE75300D8059B /* OurWebVIewTests.swift */; };
 		934D0A1A281FE75300D8059B /* OurWebVIew.h in Headers */ = {isa = PBXBuildFile; fileRef = 934D0A0C281FE75200D8059B /* OurWebVIew.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		934D0A24281FE89000D8059B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934D0A23281FE89000D8059B /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		934D0A0D281FE75200D8059B /* OurWebVIew.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = OurWebVIew.docc; sourceTree = "<group>"; };
 		934D0A13281FE75300D8059B /* OurWebVIewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OurWebVIewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		934D0A18281FE75300D8059B /* OurWebVIewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurWebVIewTests.swift; sourceTree = "<group>"; };
+		934D0A23281FE89000D8059B /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +73,10 @@
 		934D0A0B281FE75200D8059B /* OurWebVIew */ = {
 			isa = PBXGroup;
 			children = (
+				93BBAFC7282BACE2006958F5 /* Extension */,
 				934D0A0C281FE75200D8059B /* OurWebVIew.h */,
 				934D0A0D281FE75200D8059B /* OurWebVIew.docc */,
+				934D0A23281FE89000D8059B /* WebViewController.swift */,
 			);
 			path = OurWebVIew;
 			sourceTree = "<group>";
@@ -83,6 +87,13 @@
 				934D0A18281FE75300D8059B /* OurWebVIewTests.swift */,
 			);
 			path = OurWebVIewTests;
+			sourceTree = "<group>";
+		};
+		93BBAFC7282BACE2006958F5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				934D0A0E281FE75200D8059B /* OurWebVIew.docc in Sources */,
+				934D0A24281FE89000D8059B /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +280,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -325,7 +337,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -340,6 +352,7 @@
 		934D0A1E281FE75300D8059B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -349,7 +362,9 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "When in use Permissions";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -359,6 +374,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.niro.OurWebVIew;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -368,6 +384,7 @@
 		934D0A1F281FE75300D8059B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -377,7 +394,9 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "When in use Permissions";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -387,6 +406,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.niro.OurWebVIew;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -396,6 +416,7 @@
 		934D0A21281FE75300D8059B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 25BMKV4W8N;
@@ -412,6 +433,7 @@
 		934D0A22281FE75300D8059B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 25BMKV4W8N;
