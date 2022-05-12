@@ -80,7 +80,11 @@ public class WebViewController: UIViewController, WKUIDelegate, WKNavigationDele
         print(message.body)
         if(message.body as! String == "capture_location") {
             print("capture_location")
-            locationManager?.requestWhenInUseAuthorization()
+            if(locationManager?.authorizationStatus == .denied) {
+                UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+            } else {
+                locationManager?.requestWhenInUseAuthorization()
+            }
         } else if(message.body as! String == "check_phone_rooted") {
             print("check_phone_rooted")
             print("isJailBrokenBefore")
