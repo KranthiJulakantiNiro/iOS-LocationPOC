@@ -79,17 +79,30 @@ public class WebViewController: UIViewController, WKUIDelegate, WKNavigationDele
     public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         print(message.body)
         if(message.body as! String == "capture_location") {
-            print("location")
+            print("capture_location")
             locationManager?.requestWhenInUseAuthorization()
+        } else if(message.body as! String == "check_phone_rooted") {
+            print("check_phone_rooted")
+            print("isJailBrokenBefore")
+            let isJailBroken = UIDevice.current.isJailBroken
+            let isSimulator = UIDevice.current.isSimulator
+            print("isJailBroken")
+            print(isJailBroken)
+            print(isSimulator)
+            if(isJailBroken) {
+                // TODO show a pop up or something or call js method
+            } else if(isSimulator) {
+                // TODO show a pop up or something or call js method
+            } else {
+                // TODO show a pop up or something or call js method
+            }
         }
     }
     
     public func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        print(status)
+        print("hey")
         if status == .authorizedWhenInUse {
-            print("hreeeee")
             if CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self) {
-                print("heyyyy")
                 if CLLocationManager.isRangingAvailable() {
                     // do stuff
                     print("is available")

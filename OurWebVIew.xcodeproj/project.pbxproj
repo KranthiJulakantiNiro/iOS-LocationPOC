@@ -12,6 +12,7 @@
 		934D0A19281FE75300D8059B /* OurWebVIewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934D0A18281FE75300D8059B /* OurWebVIewTests.swift */; };
 		934D0A1A281FE75300D8059B /* OurWebVIew.h in Headers */ = {isa = PBXBuildFile; fileRef = 934D0A0C281FE75200D8059B /* OurWebVIew.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		934D0A24281FE89000D8059B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934D0A23281FE89000D8059B /* WebViewController.swift */; };
+		93BBAFD5282BB7B2006958F5 /* UIDevice+JailBroken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBAFD4282BB7B2006958F5 /* UIDevice+JailBroken.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,8 @@
 		934D0A13281FE75300D8059B /* OurWebVIewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OurWebVIewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		934D0A18281FE75300D8059B /* OurWebVIewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurWebVIewTests.swift; sourceTree = "<group>"; };
 		934D0A23281FE89000D8059B /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		93BBAFD4282BB7B2006958F5 /* UIDevice+JailBroken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+JailBroken.swift"; sourceTree = "<group>"; };
+		93BBB038282CBECE006958F5 /* OurWebVIew.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = OurWebVIew.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 				934D0A0B281FE75200D8059B /* OurWebVIew */,
 				934D0A17281FE75300D8059B /* OurWebVIewTests */,
 				934D0A0A281FE75200D8059B /* Products */,
+				93BBB037282CBECE006958F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,8 +96,22 @@
 		93BBAFC7282BACE2006958F5 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				93BBAFD4282BB7B2006958F5 /* UIDevice+JailBroken.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		93BBB037282CBECE006958F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93BBB038282CBECE006958F5 /* OurWebVIew.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		93BBB039282CBECE006958F5 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +193,12 @@
 			mainGroup = 934D09FF281FE75200D8059B;
 			productRefGroup = 934D0A0A281FE75200D8059B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 93BBB039282CBECE006958F5 /* Products */;
+					ProjectRef = 93BBB038282CBECE006958F5 /* OurWebVIew.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				934D0A08281FE75200D8059B /* OurWebVIew */,
@@ -207,6 +231,7 @@
 			files = (
 				934D0A0E281FE75200D8059B /* OurWebVIew.docc in Sources */,
 				934D0A24281FE89000D8059B /* WebViewController.swift in Sources */,
+				93BBAFD5282BB7B2006958F5 /* UIDevice+JailBroken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
